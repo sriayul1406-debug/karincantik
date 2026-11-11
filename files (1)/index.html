@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Misi Penyelamatan di Labirin Ajaib</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏰%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="snd" aria-label="Suara">🔊</button>
+<div id="app">
+
+<section class="scr" id="start">
+  <div class="logo">Misi di<br>Labirin Ajaib</div>
+  <div class="hero">🐵 🏰 🐰</div>
+  <button class="btn" id="go">▶ Main</button>
+</section>
+
+<section class="scr" id="maze" hidden>
+  <div class="hud"><b id="lvl"></b><span id="goal"></span></div>
+  <canvas id="cv"></canvas>
+  <div class="dpad">
+    <button class="btn" data-d="0,-1" style="grid-column:2" aria-label="Atas">⬆️</button>
+    <button class="btn" data-d="-1,0" style="grid-row:2" aria-label="Kiri">⬅️</button>
+    <button class="btn" data-d="0,1" style="grid-row:2" aria-label="Bawah">⬇️</button>
+    <button class="btn" data-d="1,0" style="grid-row:2" aria-label="Kanan">➡️</button>
+  </div>
+</section>
+
+<section class="scr" id="boss" hidden>
+  <div class="hud"><b>Level 3</b><span id="hp"></span></div>
+  <div id="arena">
+    <div id="bq"></div>
+    <div id="mon">👾</div>
+  </div>
+</section>
+
+<div class="ov" id="quiz" hidden>
+  <div class="card">
+    <button class="rep" id="qsay" aria-label="Ulangi suara">🔊</button>
+    <div id="qdots"></div>
+    <div id="qprompt"></div>
+    <div id="qopts"></div>
+  </div>
+</div>
+
+<div class="ov" id="done" hidden>
+  <div class="card">
+    <div class="trophy">🏆</div>
+    <div class="stars" id="dstars"></div>
+    <div class="big" id="dtitle"></div>
+    <button class="btn" id="dnext">Lanjut ▶</button>
+  </div>
+</div>
+
+</div>
+<script src="game.js"></script>
+</body>
+</html>
